@@ -1187,4 +1187,282 @@ input, button{
     font-size: 13.5px;
   }
 }
+
+/* ==================================================
+   قسم التحول في 21 يوم (21 Days Transformation Section)
+   ================================================== */
+.transformation_section {
+  background: radial-gradient(circle at 50% 5%, rgba(241, 5, 57, 0.16) 0%, transparent 65%), #0c0d10;
+  padding: 55px 16px 50px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(241, 5, 57, 0.35);
+  border-bottom: 1px solid rgba(241, 5, 57, 0.35);
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.5);
+}
+
+.transformation_section::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(241, 5, 57, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.transformation_section .trans_container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* الرأس والعنوان الرئيسي */
+.transformation_section .trans_header {
+  margin-bottom: 28px;
+}
+
+.transformation_section .trans_title {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: mainBold, sans-serif;
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
+.transformation_section .trans_accent {
+  color: #F10539;
+  text-shadow: 0 0 20px rgba(241, 5, 57, 0.45);
+  display: inline-block;
+}
+
+.transformation_section .trans_subtitle {
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* بطاقات الأكورديون */
+.trans_accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 35px;
+  text-align: right;
+}
+
+.trans_acc_item {
+  background: linear-gradient(145deg, #16171d, #111216);
+  border: 1.5px solid rgba(241, 5, 57, 0.22);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.trans_acc_item:hover {
+  border-color: rgba(241, 5, 57, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.trans_acc_item.active {
+  border-color: #F10539;
+  background: linear-gradient(145deg, #191a21, #131418);
+  box-shadow: 0 6px 22px rgba(241, 5, 57, 0.22);
+}
+
+/* زر رأس الأكورديون */
+.trans_acc_header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+  gap: 12px;
+  user-select: none;
+  transition: background 0.25s ease;
+}
+
+.trans_acc_header:focus-visible {
+  outline: 2px solid #F10539;
+  outline-offset: -2px;
+}
+
+.trans_acc_title {
+  color: #ffffff;
+  font-family: mainBold, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  flex-grow: 1;
+}
+
+.trans_acc_item.active .trans_acc_title {
+  color: #ffffff;
+}
+
+/* أيقونة السهم */
+.trans_acc_icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(241, 5, 57, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F10539;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s ease, color 0.25s ease;
+}
+
+.trans_acc_item:hover .trans_acc_icon {
+  background: rgba(241, 5, 57, 0.22);
+}
+
+.trans_acc_item.active .trans_acc_icon {
+  transform: rotate(180deg);
+  background: #F10539;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(241, 5, 57, 0.5);
+}
+
+/* محتوى الأكورديون المنسدل بتأثير Grid سلس */
+.trans_acc_content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+  opacity: 0;
+}
+
+.trans_acc_item.active .trans_acc_content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.trans_acc_inner {
+  overflow: hidden;
+  padding: 0 20px 20px;
+}
+
+.trans_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 14px;
+}
+
+.trans_list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.trans_list li strong {
+  color: #F10539;
+  font-weight: bold;
+}
+
+.trans_list .dot_icon {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #F10539;
+  box-shadow: 0 0 8px rgba(241, 5, 57, 0.7);
+  margin-top: 9px;
+  flex-shrink: 0;
+}
+
+/* زر اتخاذ القرار CTA */
+.trans_cta_wrapper {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.trans_cta_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #F10539 0%, #c4022b 100%);
+  color: #ffffff;
+  font-family: mainBold, sans-serif;
+  font-size: 23px;
+  font-weight: 900;
+  padding: 16px 48px;
+  border-radius: 50px;
+  box-shadow: 0 6px 24px rgba(241, 5, 57, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.trans_cta_btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 32px rgba(241, 5, 57, 0.7), inset 0 1px 3px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, #ff1a4f 0%, #d80231 100%);
+}
+
+.trans_cta_btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.trans_cta_btn svg {
+  transition: transform 0.25s ease;
+}
+
+.trans_cta_btn:hover svg {
+  transform: translateY(3px);
+}
+
+/* تجاوب الشاشات الصغيرة */
+@media (max-width: 576px) {
+  .transformation_section {
+    padding: 40px 14px 38px;
+  }
+  .transformation_section .trans_title {
+    font-size: 25px;
+  }
+  .transformation_section .trans_subtitle {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  .trans_acc_header {
+    padding: 15px 16px;
+  }
+  .trans_acc_title {
+    font-size: 16px;
+  }
+  .trans_acc_inner {
+    padding: 0 16px 16px;
+  }
+  .trans_list li {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  .trans_cta_btn {
+    width: 92%;
+    max-width: 320px;
+    font-size: 20px;
+    padding: 14px 20px;
+  }
+}
 /* ================== */
