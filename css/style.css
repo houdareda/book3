@@ -1,0 +1,1190 @@
+/* Font Files */
+
+@font-face {
+  font-family: mainFont;
+  src: local("mainFont"), url("mainFont.ttf");
+}
+@font-face {
+  font-family: mainBold;
+  src: local("mainBold"), url("mainBold.ttf");
+}
+
+/* main css */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+
+body , html{
+  font-family: mainFont, sans-serif;
+}
+.main_bold{
+  font-family: mainBold, sans-serif;
+  font-weight: bold;
+}
+a{
+  text-decoration: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+li{
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+input, button{
+  border: none;
+  outline: none;
+}
+
+
+
+/* error form style */ 
+
+#error {
+  position: relative;
+  color: #b91c1c;
+  font-size: 13.5px;
+  font-weight: bold;
+  width: 95%;
+  max-width: 95%;
+  margin: 12px auto 8px;
+  padding: 10px 14px;
+  background: #fff1f2;
+  border-radius: 10px;
+  border: 1.5px solid #f87171;
+  line-height: 1.6;
+  text-align: right;
+  direction: rtl;
+  white-space: pre-line;
+  display: none;
+  box-shadow: 0 3px 12px rgba(239, 68, 68, 0.18);
+  box-sizing: border-box;
+}
+
+#error.active {
+  display: block;
+  animation: shakeError 0.4s ease-in-out;
+}
+
+/* تمييز الحقول الإجبارية عند نسيانها */
+.form_section form input.input_error {
+  border-color: #ef4444 !important;
+  background-color: #fff1f2 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3) !important;
+  animation: shakeError 0.4s ease-in-out;
+}
+
+.upload_dropzone.dropzone_error {
+  border-color: #ef4444 !important;
+  background-color: #fff1f2 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3) !important;
+  animation: shakeError 0.4s ease-in-out;
+}
+
+@keyframes shakeError {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+
+/* button */
+
+.btn_img {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0 10px;
+}
+
+.div_btn{
+  text-align: center;
+}
+.div_btn .btn{
+  font-family: mainFont, sans-serif;
+  font-size: 28px;
+  padding: 2px 38px 2px;
+  color: #fff;
+  background: linear-gradient(#F10539, #e90134);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px #58585883;
+  cursor: pointer;
+}
+
+.button2{
+ padding-bottom: 4vw;
+}
+.button2 a{
+  color: #fff;
+  display: block;
+  width: 90%;
+  margin: 4vw auto 0;
+  padding: 12px 0;
+  background: #F10539;
+  color: #fff;
+  font-size: 8vw;
+  border-radius: 15px 15px 0 0;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+@media (min-width:576px){
+  .btn_img{
+    width: 280px;
+  }
+  
+}
+@media (min-width:992px){
+ .button2 a{
+  font-size: 4vw;
+  margin: 2vw;
+ }
+ .button2{
+  padding-bottom: 2vw;
+ }
+  
+}
+
+
+/* ================== */
+/* Start hero Section */
+.hero{
+  background: #fff;
+  position: relative;
+}
+.hero .content{
+  text-align: center;
+  
+}
+.hero .btn_img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+}
+
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+  .hero .text-hero{
+    margin: 0 auto;
+  }
+}
+
+/* ==========  md ≥ 768px  ========== */
+@media (min-width:768px){
+
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+.flex{
+  display: flex;
+}
+.hero{
+  width: 50%;
+}
+  .hero ul{
+    padding-top: 1vw;
+  }
+.hero ul li{
+  font-size: 2vw;
+  margin-bottom: 0.5vw;
+}
+.hero ul li img{
+  width: 10vw;
+}
+.hero ul li.four{
+  margin-bottom:1.5vw;
+}
+.hero ul .border{
+  height: 2vw;
+}
+
+
+.hero .content{
+  padding-bottom: 0px;
+}
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+
+
+      .hero .top_img {
+        margin-top: -1vw;
+    }
+}
+@media (min-width:1400px){
+   .hero .top_img {
+        margin-top: -1.5vw;
+    }
+
+
+}
+
+/* End hero Section */
+/* ================== */
+
+
+/* ================== */
+/* Start results Section */
+
+.results{
+  background: url(../images/bg-results.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+}
+.results .btn_img{
+  padding-bottom: 0;
+  padding: 0;
+}
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+
+
+}
+
+/* ==========  md ≥ 768px  ========== */
+@media (min-width:768px){
+
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+.results{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 0;
+}
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+
+}
+
+@media (min-width:1500px){
+
+}
+/* End results Section */
+/* ================== */
+
+
+/* ================== */
+/* Start testm Section */
+
+.testm{
+  position: relative;
+  background-image: url(../images/bg-testm.webp);
+  background-size: cover;
+  background-position: center top;
+  text-align: center;
+    position: relative;
+    padding-top: 9vw;
+    padding-bottom: 15vw;
+}
+.testm .h2_test{
+  width: 80%;
+}
+.testm .text_right {
+  width: 55%;
+  padding-right: 3vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.testm .text_right .btn_img{
+  position: absolute;
+  bottom: -18%;
+}
+.testm .text_right h3 span{
+  color: #F10539;
+  font-size: 6.6vw;
+}
+
+.testm .btn_img{
+  width: 90%;
+  margin: 0 0 0 auto;
+}
+
+.testm .text_right .imp{
+  text-align: right;
+  margin-top: 3vw;
+}
+.testm .text_right .imp h5{
+  color: #fff;
+  font-size: 4vw;
+  margin-bottom: 1vw;
+    line-height: 1.4;
+
+}
+.testm .text_right .imp h4{
+  font-size: 3vw;
+    line-height: 1.4;
+  color: #eeeeee;
+}
+.testm .text_right .imp h6{
+  font-size: 3.3vw;
+  color: #F10539;
+  line-height: 1.4;
+}
+.testm .text_right .imp p{
+  font-size: 2.1vw;
+  color: #fff;
+  padding-top: 0.5vw;
+}
+
+.testm .flex_testm{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Swiper Slider Styles */
+.container_results{
+  position: relative;
+  width: 55%;
+  padding-left: 4%;
+  padding-top: 15px;
+}
+.results-swiper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.results-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-swiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.results-swiper .swiper-button-next,
+.results-swiper .swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #F10539 0%, #dd0231 100%);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(241, 36, 36, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+  right: auto !important;
+}
+.results-swiper .swiper-button-next{
+  left: 0px;
+}
+.results-swiper .swiper-button-next:after,
+.results-swiper .swiper-button-prev:after {
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.results-swiper .swiper-button-next:hover,
+.results-swiper .swiper-button-prev:hover {
+  transform: scale(1.12);
+  box-shadow: 0 6px 18px rgba(241, 90, 36, 0.8), inset 0 1px 3px rgba(255, 255, 255, 0.6);
+}
+
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+
+}
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+  .flex.flex-reverse{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .testm{
+    padding-top: 2vw;
+    width: 100%;
+    padding-bottom: 3vw;
+  }
+
+  .testm .text_right h3 {
+    font-size: 4.2vw;
+  }
+  .testm .text_right h3 span{
+    font-size: 5vw;
+  }
+  .testm .text_right{
+    width: 45%;
+  }
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+
+}
+
+/* End testm Section */
+/* ================== */
+
+
+
+/* ================== */
+/* Start form_section Section */
+
+
+/* top form section */
+
+
+/* form */
+
+.form_section .container_form{
+  background:#101010;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+.form_section .sm-p {
+  font-size: 2.4vw;
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+  padding: 7px 0;
+  display: none;
+}
+
+
+.form_section form{
+  background: linear-gradient(to left,#0A0B0E,#0A0B0E);
+  text-align: center;
+  width: 95%;
+  margin: 0vw auto  0;
+  border-radius: 18px;
+  box-shadow: 5px 5px 8px #00000027;
+  padding-bottom: 15px;
+  border: 1px solid #f10538a1;
+}
+.form_section .top_form{
+  padding: 12px 0;
+}
+.form_section .top_form p{
+  font-size: 4.9vw;
+  line-height: 1.3;
+  color: #fbfdfd;
+}
+.form_section form .input_div{
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  }
+
+.form_section form .input_div svg{
+  position: absolute;
+  width: 30px;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+
+.form_section form .input_div .icon_Phone{
+  transform:translateY(-50%) scaleX(-1);
+}
+
+
+.form_section form input{
+  width: 100%;
+  padding: 15px 40px 15px 10px;
+  font-size: 18px;
+  box-shadow: 5px 5px 8px #00000031;
+  text-align: right;
+  font-family: sans-serif;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in;
+}
+.form_section form input:focus {
+  border-color: #68E03E;
+}
+
+/* ==================================================
+   أنماط قسم الدفع فودافون كاش وإثبات التحويل
+   ================================================== */
+.payment_method_card {
+  width: 95%;
+  margin: 0 auto 12px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-align: right;
+  box-shadow: 5px 5px 8px #00000031;
+  box-sizing: border-box;
+}
+
+.payment_method_card .payment_header {
+  margin-bottom: 8px;
+}
+
+.payment_method_card .vodafone_badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #e60000;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13.5px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(230, 0, 0, 0.3);
+}
+
+.payment_method_card .vodafone_circle {
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulseDot 1.5s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.payment_method_card .payment_alert_text {
+  font-size: 13px;
+  color: #2b2b2b;
+  line-height: 1.5;
+  margin: 8px 0 10px;
+}
+
+.payment_method_card .wallet_copy_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fb;
+  border: 1.5px dashed #F10539;
+  border-radius: 10px;
+  padding: 10px 14px;
+  gap: 10px;
+}
+
+.payment_method_card .wallet_details {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.payment_method_card .wallet_title {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.payment_method_card .wallet_num {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1A2445;
+  letter-spacing: 1.5px;
+  font-family: monospace, sans-serif;
+  direction: ltr;
+  text-align: right;
+}
+
+.payment_method_card .btn_copy_wallet {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F10539;
+  color: #ffffff;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(227, 69, 131, 0.35);
+  white-space: nowrap;
+}
+
+.payment_method_card .btn_copy_wallet:hover {
+  background: #cb2e6f;
+  transform: translateY(-1px);
+}
+
+.payment_method_card .btn_copy_wallet.copied {
+  background: #16a34a !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 8px rgba(22, 163, 74, 0.4);
+}
+
+.payment_method_card .btn_copy_wallet .copy_icon {
+  width: 16px;
+  height: 16px;
+}
+
+.payment_method_card .wallet_hint {
+  font-size: 11.5px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 8px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/* بطاقة رفع صورة الإثبات */
+.proof_upload_card {
+  width: 95%;
+  margin: 0 auto 12px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-align: right;
+  box-shadow: 5px 5px 8px #00000031;
+  box-sizing: border-box;
+}
+
+.proof_upload_card .proof_title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1A2445;
+  margin-bottom: 10px;
+}
+
+.proof_upload_card .upload_dropzone {
+  border: 2px dashed #F10539;
+  border-radius: 10px;
+  padding: 20px 12px;
+  text-align: center;
+  cursor: pointer;
+  background: #fff6fa;
+  transition: all 0.25s ease;
+}
+
+.proof_upload_card .upload_dropzone:hover,
+.proof_upload_card .upload_dropzone.dragover {
+  background: #ffecf4;
+  border-color: #b71958;
+  transform: scale(1.01);
+}
+
+.proof_upload_card .dropzone_icon {
+  margin-bottom: 4px;
+}
+
+.proof_upload_card .dropzone_prompt {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1A2445;
+  margin-bottom: 3px;
+}
+
+.proof_upload_card .dropzone_sub {
+  font-size: 12px;
+  color: #777;
+}
+
+/* بطاقة معاينة الصورة بعد الاختيار */
+.proof_upload_card .preview_card {
+  border: 1px solid #e2e4e8;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fbfcfd;
+}
+
+.proof_upload_card .preview_body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.proof_upload_card .preview_thumb_box {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #d4d8df;
+  background: #000;
+  flex-shrink: 0;
+}
+
+.proof_upload_card .preview_thumb_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proof_upload_card .preview_info {
+  text-align: right;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.proof_upload_card .preview_filename {
+  font-size: 13.5px;
+  font-weight: bold;
+  color: #1A2445;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
+  text-align: right;
+}
+
+.proof_upload_card .preview_filesize {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.proof_upload_card .preview_status {
+  font-size: 12px;
+  color: #16a34a;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.proof_upload_card .preview_actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.proof_upload_card .btn_preview_action {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.proof_upload_card .btn_change {
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.proof_upload_card .btn_change:hover {
+  background: #e0e7ff;
+}
+
+.proof_upload_card .btn_delete {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.proof_upload_card .btn_delete:hover {
+  background: #fecaca;
+}
+
+/* شريط التقدم للرفع */
+.proof_upload_card .upload_progress_wrap {
+  margin-top: 10px;
+  background: #f8fafc;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.proof_upload_card .progress_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  font-weight: bold;
+  color: #1A2445;
+  margin-bottom: 6px;
+}
+
+.proof_upload_card .progress_track {
+  width: 100%;
+  height: 9px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.proof_upload_card .progress_fill {
+  height: 100%;
+  background: linear-gradient(90deg, #F10539, #68E03E);
+  border-radius: 6px;
+  transition: width 0.2s ease;
+}
+
+/* تعديلات التجاوب */
+@media (min-width: 576px) {
+  .payment_method_card,
+  .proof_upload_card {
+    width: 90%;
+  }
+}
+
+
+/* ==========  Responsive Design  ========== */
+/* ==========  sm ≥ 576px  ========== */
+@media (min-width:576px){
+.form_section .delvery_text p{
+  font-size: 6vw;
+}
+.form_section .sm-p{
+  font-size: 2.5vw;
+}
+.form_section .top_form p{
+  font-size: 4.6vw;
+}
+.form_section form .input_div{
+  width: 90%;
+}
+}
+
+.form_section .price{
+  background: #1A2445;
+}
+
+
+/* ==========  lg ≥ 992px  ========== */
+@media (min-width:992px){
+.form_section{
+  display: flex;
+}
+.form_section .price{
+  width: 50%;
+}
+
+.form_section .container_form{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form_section form{
+  width: 90%;
+}
+.form_section .delvery_text p{
+  font-size: 30px;
+}
+.form_section .sm-p{
+  font-size: 13.5px;
+}
+.form_section .top_form p{
+  font-size: 22px;
+}
+}
+
+/* ==========  xl ≥ 1200px  ========== */
+@media (min-width:1200px){
+.form_section form{
+  padding: 25px 20px 30px;
+}
+
+
+}
+
+/* End form_section Section */
+/* ================== */
+
+/* ==================================================
+   قسم 3 خطوات بسيطة لإتمام طلبك (Order Steps Section)
+   ================================================== */
+.order_steps_section {
+  background: #101010;
+  padding: 45px 15px 40px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(227, 69, 131, 0.35);
+  border-bottom: 1px solid rgba(227, 69, 131, 0.35);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4);
+}
+
+.order_steps_section::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -15%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(227, 69, 69, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.order_steps_section .steps_container {
+  max-width: 580px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.order_steps_section .steps_header {
+  margin-bottom: 20px;
+}
+
+.order_steps_section .steps_title {
+  color: #ffffff;
+  font-size: 28px;
+  font-family: mainBold, sans-serif;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.order_steps_section .step_num_accent {
+  color: #F10539;
+  font-size: 34px;
+  margin-left: 3px;
+  display: inline-block;
+}
+
+.order_steps_section .steps_subtitle {
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* البادجات العلوية الثلاثة */
+.order_steps_section .steps_badges_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.order_steps_section .step_badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #1b1b1b;
+  border: 1px solid rgba(227, 69, 131, 0.4);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: 0.25s ease;
+}
+
+.order_steps_section .step_badge:hover {
+  border-color: #F10539;
+  transform: translateY(-1px);
+}
+
+/* عرض السعر الكبير */
+.order_steps_section .steps_price_box {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.order_steps_section .price_current {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.order_steps_section .price_digits {
+  font-size: 56px;
+  font-weight: 900;
+  color: #ffffff;
+  font-family: monospace, sans-serif;
+  line-height: 1;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.order_steps_section .price_currency {
+  font-size: 20px;
+  font-weight: 800;
+  color: #F10539;
+}
+
+.order_steps_section .price_old .old_amount {
+  font-size: 22px;
+  color: #94a3b8;
+  text-decoration: line-through;
+  text-decoration-color: #ef4444;
+  text-decoration-thickness: 2.5px;
+}
+
+.order_steps_section .steps_divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(227, 69, 69, 0.35), transparent);
+  margin-bottom: 26px;
+}
+
+/* بطاقات الخطوات */
+.order_steps_section .step_card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  text-align: right;
+  margin-bottom: 24px;
+}
+
+.order_steps_section .step_circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F10539;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(251, 191, 36, 0.35);
+  margin-top: 2px;
+}
+
+.order_steps_section .step_body {
+  flex-grow: 1;
+}
+
+.order_steps_section .step_heading {
+  color: #ffffff;
+  font-size: 18.5px;
+  font-family: mainBold, sans-serif;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.order_steps_section .step_desc {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* صندوق المحفظة داخل الخطوة 1 */
+.order_steps_section .step_wallet_widget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1b1b1b;
+  border: 1.5px solid rgba(227, 69, 131, 0.45);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  gap: 10px;
+}
+
+.order_steps_section .wallet_data {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.order_steps_section .wallet_type {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.order_steps_section .wallet_digits {
+  font-size: 23px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  font-family: monospace, sans-serif;
+  direction: ltr;
+  text-align: right;
+}
+
+.order_steps_section .btn_copy_steps {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F10539;
+  color: #121a35;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(251, 191, 36, 0.3);
+}
+
+.order_steps_section .btn_copy_steps:hover {
+  background: #f59e0b;
+  transform: translateY(-1px);
+}
+
+.order_steps_section .btn_copy_steps.copied {
+  background: #16a34a !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 10px rgba(22, 163, 74, 0.4);
+}
+
+@media (max-width: 576px) {
+  .order_steps_section .steps_title {
+    font-size: 23px;
+  }
+  .order_steps_section .price_digits {
+    font-size: 46px;
+  }
+  .order_steps_section .wallet_digits {
+    font-size: 20px;
+  }
+  .order_steps_section .btn_copy_steps {
+    padding: 8px 14px;
+    font-size: 13.5px;
+  }
+}
+/* ================== */
